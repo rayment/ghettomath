@@ -1,0 +1,16 @@
+ghettomath - The worst math library you will ever use
+
+-----------------------------------------------------
+
+ghettomath is a math library. It is perhaps the worst math library you will ever
+use. It is so bad, it uses only + - * / // operators for everything, including
+logical comparisons. Because of this, math functions have many conditions of use
+use to avoid issues such as divide by zero.
+
+You can find the binding relevant to your language in the corresponding folder.
+
+You are welcome.
+
+ghettomath is licensed under BSD 3-Clause.
+All license information is available in the included COPYING file.
+
