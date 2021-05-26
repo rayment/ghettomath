@@ -8,6 +8,8 @@
 
 PI = 3.141592653589793238462643383279502884197169399375105820974944592307816406
 E  = 2.718281828459045235360287471352662497757247093699959574966967627724076630
+true  = 1
+false = 0
 
 def floor(x):
 	return x // 1
@@ -67,14 +69,26 @@ def eq0(x):
 def abs(x):
 	return x * sign(x)
 
+def neq0(x):
+	return abs(sign(x))
+
+def and(x, y):
+	return eq(x+y, 2)
+
+def or(x, y):
+	return neq0(x+y)
+
+def not(x):
+	return eq0(x)
+
+def xor(x, y):
+	return and(a, not(b)) + and(not(a), b)
+
 def round_down(x):
 	return floor(abs(x)) * sign(x)
 
 def round_up(x):
 	return ceil(abs(x)) * sign(x)
-
-def neq0(x):
-	return abs(sign(x))
 
 def min(x, y):
 	return (x + y - abs(x - y)) / 2
