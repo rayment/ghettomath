@@ -72,17 +72,17 @@ def abs(x):
 def neq0(x):
 	return abs(sign(x))
 
-def and(x, y):
+def and2(x, y):
 	return eq(x+y, 2)
 
-def or(x, y):
+def or2(x, y):
 	return neq0(x+y)
 
-def not(x):
+def not1(x):
 	return eq0(x)
 
-def xor(x, y):
-	return and(a, not(b)) + and(not(a), b)
+def xor2(x, y):
+	return and2(a, not2(b)) + and2(not2(a), b)
 
 def round_down(x):
 	return floor(abs(x)) * sign(x)
@@ -151,6 +151,15 @@ def log2(x):
 
 def log(x):
 	return logn(x, 10)
+
+def pow(x, y):
+	return exp(y * ln(x))
+
+def sqrt(x):
+	return pow(x, 1/2)
+
+def cbrt(x):
+	return pow(x, 1/3)
 
 def sin(x):
 	a = round_down(x / (PI))
