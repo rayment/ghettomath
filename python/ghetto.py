@@ -100,8 +100,9 @@ def clamp(a, b, x):
 	return max(a, min(b, x))
 
 def mod(x, y):
-	r = x - (y * floor(x/y))
-	return neq0(r) * (lt0(x) * (r-y)) + (geq0(x) * r)
+	#r = x - (y * (x//y))
+	#return neq0(r) * (lt0(x) * (r-y)) + (geq0(x) * r)
+	return x - x // y * y + lt0(x) * y
 
 def exp(x):
 	p = x+81-(81*x/(x+82-(x*82/(x+83-(83*x/(x+84-(84*x/(x+85))))))))
